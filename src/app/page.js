@@ -1,7 +1,8 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-
+import { IoCaretDownOutline, IoCloseOutline } from "react-icons/io5";
+import { FaSquareXmark } from "react-icons/fa6";
 export default function Home() {
   const [value, setValue] = useState("");
   const [characters, setCharacters] = useState([]);
@@ -86,12 +87,12 @@ export default function Home() {
         {selectedCharacters.map((character) => (
           <div key={character.id} className="selected_character_container">
             {character.name}
-            <button
-              onClick={() => handleRemoveCharacter(character.id)}
+            <FaSquareXmark
               className="removeCharacterButton"
-            >
-              x
-            </button>
+              onClick={() => handleRemoveCharacter(character.id)}
+              size={"25px"}
+              color="#94a3b8"
+            ></FaSquareXmark>
           </div>
         ))}
         <input
@@ -102,6 +103,11 @@ export default function Home() {
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={handleInputKeyDown}
         />
+        <IoCaretDownOutline
+          size={"25px"}
+          color="#475569"
+          style={{ marginRight: "10px" }}
+        ></IoCaretDownOutline>
       </div>
 
       {loading && <p>Loading...</p>}
