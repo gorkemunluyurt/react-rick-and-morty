@@ -108,7 +108,7 @@ export default function Home() {
       {error && <p>Error: {error}</p>}
 
       <div className="itemBox characterItemContainer">
-        {characters.map((character) => {
+        {characters.map((character, index) => {
           const boldedName = character.name
             .split(new RegExp(`(${value})`, "gi"))
             .map((part, index) => {
@@ -122,7 +122,14 @@ export default function Home() {
               );
             });
           return (
-            <div key={character.id} className="item-container">
+            <div
+              key={character.id}
+              style={{
+                borderColor:
+                  index === characters.length - 1 ? "white" : "#9caabd",
+              }}
+              className="item-container"
+            >
               <input
                 className="checkBox"
                 type="checkbox"
