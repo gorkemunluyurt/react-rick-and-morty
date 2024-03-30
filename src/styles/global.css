@@ -5,6 +5,8 @@
   color: black;
   font-weight: 700;
   font-size: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .input:focus {
     outline: none;
@@ -66,16 +68,16 @@
     gap: 10px;
     flex-wrap: wrap;
     border: 2px solid #9caabd;
-    padding: 10px;
+    padding: 4px;
     border-radius: 15px;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
   }
   .selected_character_container{
     display: flex;
     align-items: center;
-    border-radius: 9px;
-    padding: 7px;
-    margin: 2px;
+    border-radius: 10px;
+    padding: 7px 10px;
+    margin-left: 2px;
     background-color: #e2e8f0;
     color: #4a576a;
     font-weight: 600; 
@@ -86,10 +88,10 @@
     color: white;
     background-color: #94a3b8;
     border: 0;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 6px;
-    width: 30px;
-    height: 30px;
+    width: 23px;
+    height: 23px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,7 +101,7 @@
     overflow-y: auto;
     border: 2px solid #9caabd;
     border-radius: 15px;
-    width: 99%;
+    width: 100%;
     margin-top: 15px;
   }
   
